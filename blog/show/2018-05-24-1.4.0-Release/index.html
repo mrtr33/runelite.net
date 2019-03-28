@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.4.0 Release - RuneLite</title><meta name="description" content="Obsidian theme, 05/10 interface styles, and screen markers"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/85.a04f18ec.chunk.css" rel="stylesheet"><link href="/static/css/main.a563b2ad.chunk.css" rel="stylesheet"><script charset="utf-8" src="/static/js/3.31c51668.chunk.js"></script><script charset="utf-8" src="/static/js/36.618471b0.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="RuneLite"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/tag"><i class="fas fa-code"></i> Tags</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U" title="Discord"><i class="fab fa-discord"></i><span class="d-lg-none"> Discord</span></a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient" title="Twitter"><i class="fab fa-twitter"></i><span class="d-lg-none"> Twitter</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite" title="GitHub"><i class="fab fa-github"></i><span class="d-lg-none"> GitHub</span></a></li><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li><li class="nav-item"><form class="form-inline"><button class="btn btn-primary" type="button"><i class="fas fa-user"></i> Login</button></form></li></ul></div></nav><div class="container" id="layout"><h1>1.4.0 Release</h1><p class="text-muted">10 months ago by Adam</p><hr><div class="markdown-body"><div><p>The new Obsidian theme has been released, which re-skins the client UI and most
+of the plugin panel intefaces. Thanks to <a href="https://github.com/psikoi">@psikoi</a>
+who has been working on this for the last month.</p>
+<p><img src="/img/blog/1.4.0-Release/obsidian1.png" alt="obsidian1"></p>
+<p><img src="/img/blog/1.4.0-Release/obsidian2.png" alt="obsidian2"></p>
+<p><img src="/img/blog/1.4.0-Release/obsidian3.png" alt="obsidian3"></p>
+<p><img src="/img/blog/1.4.0-Release/obsidian4.png" alt="obsidian4"></p>
+<p>An interface style plugin was added to allow switching the 2005 or 2010 game
+frames.</p>
+<p><img src="/img/blog/1.4.0-Release/2005.png" alt="2005"></p>
+<p><img src="/img/blog/1.4.0-Release/2010.png" alt="2010"></p>
+<p>A screenmarker plugin was added to mark areas on the screen.</p>
+<p><img src="/img/blog/1.4.0-Release/marker.png" alt="screenmarker"></p>
+<p>Support for level goals has been added, that loads the XP/level goals from the
+Vanilla goals interface and displays it in XP tracker.</p>
+<p><img src="/img/blog/1.4.0-Release/goals.png" alt="goals"></p>
+<p>The world map plugin now shows all teleport locations, and detailed requirements
+for all agility obstacles.</p>
+<p><img src="/img/blog/1.4.0-Release/tele.png" alt="tele"></p>
+<p><img src="/img/blog/1.4.0-Release/shortcut.png" alt="shortcut"></p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Fix agility plugin to not show obstacles in Vespula's raid room</li>
+<li>Fix impling plugin incorrectly showing imps after a world hop (1.3.9.1)</li>
+<li>Add Corsair Cove fishing spots to fishing plugin</li>
+<li>Add Gu'Tanoth bridge obstacles to agility plugin</li>
+<li>Improve performance of stretched fixed mode by utilizing volatile images</li>
+<li>Check inventory for required emote clue items too</li>
+<li>Add gem rocks to mining calculator</li>
+<li>Fix plugin toolbar tooltips</li>
+<li>Fix low detail mode sometimes causing game sounds to not load</li>
+<li>Change the anti-drag plugin to only work with shift held</li>
+<li>Fix slayer bracelet charges not updating when there is only one charge left</li>
+<li>Add commas to ground item quantities</li>
+<li>Add Burgh de Rott fishing spots to fishing plugin</li>
+<li>Fix bounds for west bookcases in the Kourend Library (1.3.9.1)</li>
+<li>Add teak garden bench to construction calculator</li>
+<li>A notification and timer were added to the agility plugin for the agility
+arena</li>
+<li>XP boosts for bones have been corrected in the skill calculator</li>
+<li>Farming, fishing, herblore, and hunter have been expanded on in the skill
+calculator</li>
+</ul>
+<p>Additionally there were clue fixes from user35557, Jouni Pikkarainen, and Jordan
+Atwood.</p>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 26 contributors this release!</p>
+<pre><code>Abex (1):
+      interfacestyles: Run on game thread (#3129)
+
+Adam (21):
+      Update substance to 8.0.02
+      Bump to 1.4.0-SNAPSHOT
+      runescape-api: add sprite related imports for interface style plugin
+      runelite-api: add sprite override api
+      runelite-api: add widget positioned event
+      Add interface styles plugin
+      runelite-client: fix usage of npc despawn event
+      agility plugin: limit obstacles to agility pyramid regions
+      modelviewer: begin work on tile shapes
+      Revert "Delay setting of low detail mode"
+      low detail plugin: apply low detail on startup if on login screen
+      runelite-mixins: fix hasHintArrow
+      runelite-api: expand hint arrow api
+      Revert "Fix early stop of player lookup in HiScores (#3035)"
+      hiscore panel: wrap lookup in a runnable exception logger
+      hiscore panel: clear tooltips when clearing levels
+      hiscore panel: pass result to detailsHtml and remove reduncant null check
+      hiscore panel: remove duplicate getExperience
+      runelite-client: add detached overlay position
+      runelite-client: add screen markers plugin
+      screen marker panel: fix toggling hide/show
+
+Alex Kolpa (5):
+      Clear plugin skill tracking on reset
+      Add agility arena notifier
+      Add agility arena timer
+      Don't show experience progress for unranked skills
+      Change AgilityArenaTimer contact to GitHub account (#3121)
+
+Joel (1):
+      Add missing Corsair Cove fishing spots (#3096)
+
+Jordan Atwood (2):
+      Add puzzle box indicator to Drunken Dwarf clue
+      Add Gu'Tanoth bridge obstacles
+
+Jouni Pikkarainen (1):
+      Fixed typo in a cryptic clue solution
+
+Levi Schuck (2):
+      Fix til next level time for low xp amounts
+      Switch to safer division method without floats Use custom formatter since LocalTime.toString rolls over the amount of days.
+
+Lotto (5):
+      entityhider: don't hide npcs by default
+      client: use Image instead of BufferedImage
+      stretchedfixedmode: use volatile image instead of buffered image
+      emoteclues: change symbols to ✓ and ✗
+      emoteclues: display when item is in inventory
+
+Magic fTail (2):
+      Fix edgeville monastery emote clue scroll (#2909)
+      Add missing Port Sarim and Ape Toll fishing spots (#2837)
+
+Max Weber (5):
+      Cleanup FarmingTracker panels
+      Add VarC events
+      Allow get/setVarbitValue to operate on arbitrary varp sets
+      devtools: Replace Var tracker with Var Inspector
+      varinspector: Lazily initialize var arrays
+
+Morgan Lewis (4):
+      WorldMap: Add teleport destinations for spells and jewellery
+      WorldMapPointManager: Fix concurrent modification exception
+      WorldMap: Add agility shortcut level requirements
+      WorldMap: Fix jewellery item name loading bugs
+
+Rheon-D (1):
+      Fix friend note not displaying due to color tags
+
+Ruben (3):
+      Restore Plugin Toolbar Button Tooltips (#2833)
+      Add Gem rocks to mining calculator plugin (#2907)
+      Add mouse hover changes to various ui elements
+
+Ruben Amendoeira (22):
+      Restyled the client frame
+      Added custom components + moved/rewrote some
+      Grand Exchange Plugin redesign
+      Hiscore Plugin redesign
+      Kourend Library Plugin slight design tweak
+      News Feed Plugin slight design tweak
+      Notes Plugin slight design tweak
+      Configs slight design tweak
+      Exp trackers plugin redesign
+      Info panel redesign
+      Farming plugin panel redesign
+      Plugin side toolbar design tweak
+      Skilling Calculators Plugin design tweak
+      SetOpaque performance fix
+      Fix Config search bar focus
+      Moved the new text selection colors globally
+      Removed unused styling on JComboBox
+      Fixed exp tracker pop-up in the progress bar
+      Recolour config names to white
+      Expanded SkillIconManager to include smaller versions
+      Added/Changed custom UI components
+      Skill Calc plugin redesign
+
+Seth (1):
+      impling plugin: fix impling list not clearing on hopping worlds
+
+SoyChai (1):
+      Friend notes plugin: Add documentation and increase code readability (#2714)
+
+Tomas Slusny (7):
+      Delay setting of low detail mode
+      Change Anti-Drag plugin to work only with SHIFT
+      Fix access levels in XpStateSingle
+      Add Varps for player experience goals
+      Add support for player experience goals to tracker
+      Add support for preferredSize to OverlayRenderer
+      Change ScreenMarkers to use OverlayRenderer
+
+Unknown (1):
+      Change string to match for slayer bracelet
+
+William Metcalf (1):
+      Add commas to ground item quantities
+
+WooxSolo (1):
+      Add RSTileMixin.getGroundItems and RSNPCMixin.getTransformedComposition
+
+Xavier Bergeron (1):
+      Fix early stop of player lookup in HiScores (#3035)
+
+raqes (1):
+      Fix 2005 interface container alignment, add scrollbar and spellbooks
+
+shmeeps (1):
+      Add Burgh de Rott fishing spots to fishing overlays (#3132)
+
+trimbe (1):
+      Fix bounds for west bookcases in Kourend library (#2875)
+
+user35557 (1):
+      Clue Scrolls: fix dark warrior fortress clue coordinates (#3083)
+
+wa1id (1):
+      Add teak garden bench to construction calculator.
+</code></pre></div></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a><a href="http://localhost:8000/atom.xml" class="float-right"><i class="fas fa-rss"></i> Subscribe via RSS</a></div></div></div></div><script>!function(o){function e(e){for(var c,f,d=e[0],t=e[1],r=e[2],n=0,a=[];n<d.length;n++)f=d[n],b[f]&&a.push(b[f][0]),b[f]=0;for(c in t)Object.prototype.hasOwnProperty.call(t,c)&&(o[c]=t[c]);for(s&&s(e);a.length;)a.shift()();return i.push.apply(i,r||[]),u()}function u(){for(var e,c=0;c<i.length;c++){for(var f=i[c],d=!0,t=1;t<f.length;t++){var r=f[t];0!==b[r]&&(d=!1)}d&&(i.splice(c--,1),e=l(l.s=f[0]))}return e}var f={},a={87:0},b={87:0},i=[];function l(e){if(f[e])return f[e].exports;var c=f[e]={i:e,l:!1,exports:{}};return o[e].call(c.exports,c,c.exports,l),c.l=!0,c.exports}l.e=function(i){var e=[];a[i]?e.push(a[i]):0!==a[i]&&{9:1,10:1,11:1}[i]&&e.push(a[i]=new Promise(function(e,d){for(var c="static/css/"+({}[i]||i)+"."+{1:"31d6cfe0",2:"31d6cfe0",3:"31d6cfe0",4:"31d6cfe0",5:"31d6cfe0",6:"31d6cfe0",7:"31d6cfe0",8:"31d6cfe0",9:"f2b653e4",10:"7dce9c00",11:"8726d06a",12:"31d6cfe0",13:"31d6cfe0",14:"31d6cfe0",15:"31d6cfe0",16:"31d6cfe0",17:"31d6cfe0",18:"31d6cfe0",19:"31d6cfe0",20:"31d6cfe0",21:"31d6cfe0",22:"31d6cfe0",23:"31d6cfe0",24:"31d6cfe0",25:"31d6cfe0",26:"31d6cfe0",27:"31d6cfe0",28:"31d6cfe0",29:"31d6cfe0",30:"31d6cfe0",31:"31d6cfe0",32:"31d6cfe0",33:"31d6cfe0",34:"31d6cfe0",35:"31d6cfe0",36:"31d6cfe0",37:"31d6cfe0",38:"31d6cfe0",39:"31d6cfe0",40:"31d6cfe0",41:"31d6cfe0",42:"31d6cfe0",43:"31d6cfe0",44:"31d6cfe0",45:"31d6cfe0",46:"31d6cfe0",47:"31d6cfe0",48:"31d6cfe0",49:"31d6cfe0",50:"31d6cfe0",51:"31d6cfe0",52:"31d6cfe0",53:"31d6cfe0",54:"31d6cfe0",55:"31d6cfe0",56:"31d6cfe0",57:"31d6cfe0",58:"31d6cfe0",59:"31d6cfe0",60:"31d6cfe0",61:"31d6cfe0",62:"31d6cfe0",63:"31d6cfe0",64:"31d6cfe0",65:"31d6cfe0",66:"31d6cfe0",67:"31d6cfe0",68:"31d6cfe0",69:"31d6cfe0",70:"31d6cfe0",71:"31d6cfe0",72:"31d6cfe0",73:"31d6cfe0",74:"31d6cfe0",75:"31d6cfe0",76:"31d6cfe0",77:"31d6cfe0",78:"31d6cfe0",79:"31d6cfe0",80:"31d6cfe0",81:"31d6cfe0",82:"31d6cfe0",83:"31d6cfe0",84:"31d6cfe0",86:"31d6cfe0"}[i]+".chunk.css",t=l.p+c,f=document.getElementsByTagName("link"),r=0;r<f.length;r++){var n=(o=f[r]).getAttribute("data-href")||o.getAttribute("href");if("stylesheet"===o.rel&&(n===c||n===t))return e()}var a=document.getElementsByTagName("style");for(r=0;r<a.length;r++){var o;if((n=(o=a[r]).getAttribute("data-href"))===c||n===t)return e()}var u=document.createElement("link");u.rel="stylesheet",u.type="text/css",u.onload=e,u.onerror=function(e){var c=e&&e.target&&e.target.src||t,f=new Error("Loading CSS chunk "+i+" failed.\n("+c+")");f.request=c,d(f)},u.href=t,document.getElementsByTagName("head")[0].appendChild(u)}).then(function(){a[i]=0}));var f=b[i];if(0!==f)if(f)e.push(f[2]);else{var c=new Promise(function(e,c){f=b[i]=[e,c]});e.push(f[2]=c);var d,t=document.getElementsByTagName("head")[0],r=document.createElement("script");r.charset="utf-8",r.timeout=120,l.nc&&r.setAttribute("nonce",l.nc),r.src=l.p+"static/js/"+({}[i]||i)+"."+{1:"29d6e463",2:"fe661059",3:"31c51668",4:"1be4fab1",5:"6857ea61",6:"87012689",7:"04183c25",8:"2d43f3e8",9:"df9de5dc",10:"0d5bbe3b",11:"033d7632",12:"fac6388a",13:"40004027",14:"4147d5e2",15:"79bd430f",16:"11236884",17:"2e66e9b2",18:"6bddb31a",19:"370126bb",20:"1cbcee90",21:"d5579174",22:"61a00b81",23:"99bbab3f",24:"ce27f0a0",25:"956de0b5",26:"ec8b6c9a",27:"cbe172fd",28:"299e1f28",29:"7283e1cf",30:"878684eb",31:"1eb52231",32:"b575e6c9",33:"2c55c7f2",34:"a5e3ac8b",35:"e3100637",36:"618471b0",37:"035c25ad",38:"c5533aa0",39:"4db0a4a7",40:"45008cbe",41:"6444b490",42:"d79a4a18",43:"833739a2",44:"9f0cbeea",45:"c2a08fc5",46:"72430e22",47:"0b31bbd8",48:"422d420d",49:"2391739c",50:"0c22dcb1",51:"dd4fb425",52:"f557aeee",53:"642aca24",54:"399b38f9",55:"f78dfb04",56:"ca99fce0",57:"89e47f3b",58:"755b4e42",59:"d02602e8",60:"ca46efec",61:"dfb849dc",62:"3b7532ae",63:"844e7ac2",64:"0dfc70a1",65:"e57efc3b",66:"42c0a7f2",67:"ddf73d3b",68:"cd0be2fd",69:"ead5431d",70:"4c0b3502",71:"fd319e5d",72:"2d956d5e",73:"6030e2ca",74:"d15b7d9f",75:"e535c3ff",76:"1f5c9a41",77:"e1259f37",78:"ef94a54a",79:"bea66722",80:"d1c06ca4",81:"6573a10e",82:"0fdf25f1",83:"63be4924",84:"122bbadd",86:"e0306163"}[i]+".chunk.js",d=function(e){r.onerror=r.onload=null,clearTimeout(n);var c=b[i];if(0!==c){if(c){var f=e&&("load"===e.type?"missing":e.type),d=e&&e.target&&e.target.src,t=new Error("Loading chunk "+i+" failed.\n("+f+": "+d+")");t.type=f,t.request=d,c[1](t)}b[i]=void 0}};var n=setTimeout(function(){d({type:"timeout",target:r})},12e4);r.onerror=r.onload=d,t.appendChild(r)}return Promise.all(e)},l.m=o,l.c=f,l.d=function(e,c,f){l.o(e,c)||Object.defineProperty(e,c,{enumerable:!0,get:f})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(c,e){if(1&e&&(c=l(c)),8&e)return c;if(4&e&&"object"==typeof c&&c&&c.__esModule)return c;var f=Object.create(null);if(l.r(f),Object.defineProperty(f,"default",{enumerable:!0,value:c}),2&e&&"string"!=typeof c)for(var d in c)l.d(f,d,function(e){return c[e]}.bind(null,d));return f},l.n=function(e){var c=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(c,"a",c),c},l.o=function(e,c){return Object.prototype.hasOwnProperty.call(e,c)},l.p="/",l.oe=function(e){throw console.error(e),e};var c=window.webpackJsonp=window.webpackJsonp||[],d=c.push.bind(c);c.push=e,c=c.slice();for(var t=0;t<c.length;t++)e(c[t]);var s=d;u()}([])</script><script src="/static/js/85.12fe7991.chunk.js"></script><script src="/static/js/main.d5263401.chunk.js"></script></body></html>

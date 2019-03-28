@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><meta name="google-site-verification" content="_wxrTRAcgx3bHof630x75_YKSXklUH55NkOAA_5GfmU"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>1.5.15 Release - RuneLite</title><meta name="description" content="Music unlock notifications, clan chat join messages and member counter"><meta name="author" content="Adam"><script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script><script type="text/javascript">!function(i){if(i.search){var l={};i.search.slice(1).split("&").forEach(function(i){var a=i.split("=");l[a[0]]=a.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==l.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(l.p||"")+(l.q?"?"+l.q:"")+i.hash)}}(window.location)</script><link href="/static/css/85.a04f18ec.chunk.css" rel="stylesheet"><link href="/static/css/main.a563b2ad.chunk.css" rel="stylesheet"><script charset="utf-8" src="/static/js/3.31c51668.chunk.js"></script><script charset="utf-8" src="/static/js/80.d1c06ca4.chunk.js"></script></head><body><div id="root"><div style="height: 100%;"><div class="fixed-top animated loader" style="display: none;"></div><nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white"><a class="navbar-brand" activeclassname="active" href="/"><img src="/img/logo.png" class="icon" alt="RuneLite"> Home</a><input type="checkbox" id="navbar-check-box"><label for="navbar-check-box" class="navbar-toggler"><span class="navbar-toggler-icon"></span></label><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" activeclassname="active" href="/features"><i class="fas fa-cogs"></i> Features</a></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/blog"><i class="fas fa-newspaper"></i> Blog</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/wiki"><i class="fas fa-file-alt"></i> Wiki</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown"><i class="fas fa-font"></i> API</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="https://static.runelite.net/api/runelite-api/">RuneLite API</a><a class="dropdown-item" href="https://static.runelite.net/api/runelite-client/">RuneLite Client API</a></div></li><li class="nav-item"><a class="nav-link" activeclassname="active" href="/tag"><i class="fas fa-code"></i> Tags</a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link" href="https://discord.gg/mePCs8U" title="Discord"><i class="fab fa-discord"></i><span class="d-lg-none"> Discord</span></a></li><li class="nav-item"><a class="nav-link" href="https://twitter.com/RuneLiteClient" title="Twitter"><i class="fab fa-twitter"></i><span class="d-lg-none"> Twitter</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite" title="GitHub"><i class="fab fa-github"></i><span class="d-lg-none"> GitHub</span></a></li><li class="nav-item"><a class="nav-link" href="https://www.patreon.com/runelite"><i class="fab fa-patreon"></i> Become a patron</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/runelite/runelite/stargazers"><i class="fas fa-star"></i>  Stargazers</a></li><li class="nav-item"><form class="form-inline"><button class="btn btn-primary" type="button"><i class="fas fa-user"></i> Login</button></form></li></ul></div></nav><div class="container" id="layout"><h1>1.5.15 Release</h1><p class="text-muted">3 weeks ago by Adam</p><hr><div class="markdown-body"><div><p>A music notification plugin was added which sends you a message whenever a new
+piece of music is unlocked.</p>
+<p><img src="/img/blog/1.5.15-Release/music.png" alt="music"></p>
+<p>The clan plugin now has an option to show when players join or leave clan chats.
+The messages disappear after a short duration, and can also be filtered by
+player rank.</p>
+<p><img src="/img/blog/1.5.15-Release/ccjoin.png" alt="ccjoin"></p>
+<p>The clan plugin also has an option to show an infobox of the number of clan
+members near you.</p>
+<p><img src="/img/blog/1.5.15-Release/ccplayers.png" alt="ccplayers"></p>
+<p>Finally, the clan plugin has a new option to show clan member rank in public and
+private messages too.</p>
+<p>There are also several smaller improvements and bug fixes, including:</p>
+<ul>
+<li>Fix Monkey Madness I requirement on the Kourend Diary</li>
+<li>Fix twitter feed links not working in the news panel with newer Twitter theme</li>
+<li>Add pestle and mortar to idle notifier</li>
+<li>Replaced our raids point overlay with the ingame one, and made it movable with
+alt.</li>
+<li>Move Tai Bwo Wannai Emote location closer to STASH unit</li>
+<li>Fix logging into RuneLite accounts after having just logged out</li>
+<li>Add Compost, Bastion and Battlemage potions to Herblore skill calc</li>
+</ul>
+<p>Enjoy!</p>
+<p>- Adam</p>
+<h3 id="new-commits">New commits</h3>
+<p>We had 13 contributors this release!</p>
+<pre><code>Adam (15):
+      Move session events from api to client
+      api: add changed varp index to VarbitChanged event
+      runescape-api: make RSNameableContainer a generic type
+      xptracker: remove unused exception
+      xptracker: use tracked overall xpstate to calculate total xp
+      xptracker: use long for tracking overall xp
+      api: add method to remove MessageNodes
+      api: add clan member join and leave events
+      api: add methods to get clan owner and chat name
+      clanchat plugin: add join/leave messages
+      Revert "Merge pull request #8070 from Nightfirecat/fix-ground-markers-bug"
+      Revert "Merge pull request #5890 from Nightfirecat/colored-ground-markers"
+      clan chat: cleanup onGameStateChanged logic from earlier merge
+      account plugin: move logout off of swing thread
+      session manager: change to null session on close
+
+Brennan Williams (1):
+      Add Hydra shortcut pipes to agility plugin (#8052)
+
+Chives (2):
+      Remove Monkey Madness I requirement from Kourend Diary.
+      Replace assert keyword with JUnit assert functions
+
+Jordan Atwood (7):
+      worldpoint: Fix plane value in toLocalInstance
+      worldpoint: Add static fromRegion method
+      worldpoint: Add getRegionX() and getRegionY()
+      ground markers plugin: Clean up legacy code
+      ground markers: Fix startup and shutdown bug
+      ground markers: Allow different colored markers
+      ground markers: Fix marking non-marked tiles
+
+Lotto (1):
+      http-service: fix twitter feed links not working with newer theme
+
+Sebastiaan Vanspauwen (1):
+      Clanchat: added onClanChanged event to count players already in scene
+
+SebastiaanVanspauwen (2):
+      Clanchat: Show amount of members near you in infobox
+      Clanchat: clear counter on login/connection lost instead of loading (#8068)
+
+Shaun Dreclin (7):
+      idle notifier: Add support for grinding with pestle and mortar
+      daily task indicator: Fix plugin not checking tasks when first enabled
+      api: Add EnumID class
+      api: Add getKeys() to EnumComposition
+      api: Add unlocked music tracks to VarPlayer
+      client: Add Music Track Indicator plugin
+      rogues den: Update plugin to use ItemContainerChanged event
+
+TheStonedTurtle (1):
+      clanchat plugin: add CC rank icons to oublic and private messages
+
+Tomas Slusny (11):
+      Add missing toggle for clan chat icons
+      Fix RAIDS_POINTS_INFOBOX widget ID
+      Make raids widget moveable
+      Remove raids points overlay
+      Null-check remote configuration in config manager
+      Change logged-in redir to redirect to HTTPS
+      Update suppressions.xml dtd link to one that exists
+      Fix SpringBootWebApplication auto-configuration annotation
+      Migrate SpringBootWebApplicationTest to spring profiles
+      Migrate Spring unit tests to spring profiles
+      clanchat: Update clan members set on join/leave events
+
+WoneTooPhree (1):
+      Move Tai Bwo Wannai Emote location closer to STASH
+
+chivesrs (2):
+      Update CheckStyle XML dtd link to one that exists (#8079)
+      Enable checkstyle on test sources
+
+piebandit (1):
+      Add Compost, Bastion and Battlemage potions to Herblore skill calc (#8031)
+
+trimbe (4):
+      mixins: use a ClanMember for ClanMemberJoined/Left
+      clanchat: retrieve rank from ClanMember rather than ClanManager
+      clanchat: respect rank icon config for join/leave messages
+      clanchat: remove activity in buffer in ClanMemberLeft as well
+</code></pre></div></div><div><hr>Developed with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> using <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a> and <a href="https://fontawesome.com/">Font Awesome</a><a href="http://localhost:8000/atom.xml" class="float-right"><i class="fas fa-rss"></i> Subscribe via RSS</a></div></div></div></div><script>!function(o){function e(e){for(var c,f,d=e[0],t=e[1],r=e[2],n=0,a=[];n<d.length;n++)f=d[n],b[f]&&a.push(b[f][0]),b[f]=0;for(c in t)Object.prototype.hasOwnProperty.call(t,c)&&(o[c]=t[c]);for(s&&s(e);a.length;)a.shift()();return i.push.apply(i,r||[]),u()}function u(){for(var e,c=0;c<i.length;c++){for(var f=i[c],d=!0,t=1;t<f.length;t++){var r=f[t];0!==b[r]&&(d=!1)}d&&(i.splice(c--,1),e=l(l.s=f[0]))}return e}var f={},a={87:0},b={87:0},i=[];function l(e){if(f[e])return f[e].exports;var c=f[e]={i:e,l:!1,exports:{}};return o[e].call(c.exports,c,c.exports,l),c.l=!0,c.exports}l.e=function(i){var e=[];a[i]?e.push(a[i]):0!==a[i]&&{9:1,10:1,11:1}[i]&&e.push(a[i]=new Promise(function(e,d){for(var c="static/css/"+({}[i]||i)+"."+{1:"31d6cfe0",2:"31d6cfe0",3:"31d6cfe0",4:"31d6cfe0",5:"31d6cfe0",6:"31d6cfe0",7:"31d6cfe0",8:"31d6cfe0",9:"f2b653e4",10:"7dce9c00",11:"8726d06a",12:"31d6cfe0",13:"31d6cfe0",14:"31d6cfe0",15:"31d6cfe0",16:"31d6cfe0",17:"31d6cfe0",18:"31d6cfe0",19:"31d6cfe0",20:"31d6cfe0",21:"31d6cfe0",22:"31d6cfe0",23:"31d6cfe0",24:"31d6cfe0",25:"31d6cfe0",26:"31d6cfe0",27:"31d6cfe0",28:"31d6cfe0",29:"31d6cfe0",30:"31d6cfe0",31:"31d6cfe0",32:"31d6cfe0",33:"31d6cfe0",34:"31d6cfe0",35:"31d6cfe0",36:"31d6cfe0",37:"31d6cfe0",38:"31d6cfe0",39:"31d6cfe0",40:"31d6cfe0",41:"31d6cfe0",42:"31d6cfe0",43:"31d6cfe0",44:"31d6cfe0",45:"31d6cfe0",46:"31d6cfe0",47:"31d6cfe0",48:"31d6cfe0",49:"31d6cfe0",50:"31d6cfe0",51:"31d6cfe0",52:"31d6cfe0",53:"31d6cfe0",54:"31d6cfe0",55:"31d6cfe0",56:"31d6cfe0",57:"31d6cfe0",58:"31d6cfe0",59:"31d6cfe0",60:"31d6cfe0",61:"31d6cfe0",62:"31d6cfe0",63:"31d6cfe0",64:"31d6cfe0",65:"31d6cfe0",66:"31d6cfe0",67:"31d6cfe0",68:"31d6cfe0",69:"31d6cfe0",70:"31d6cfe0",71:"31d6cfe0",72:"31d6cfe0",73:"31d6cfe0",74:"31d6cfe0",75:"31d6cfe0",76:"31d6cfe0",77:"31d6cfe0",78:"31d6cfe0",79:"31d6cfe0",80:"31d6cfe0",81:"31d6cfe0",82:"31d6cfe0",83:"31d6cfe0",84:"31d6cfe0",86:"31d6cfe0"}[i]+".chunk.css",t=l.p+c,f=document.getElementsByTagName("link"),r=0;r<f.length;r++){var n=(o=f[r]).getAttribute("data-href")||o.getAttribute("href");if("stylesheet"===o.rel&&(n===c||n===t))return e()}var a=document.getElementsByTagName("style");for(r=0;r<a.length;r++){var o;if((n=(o=a[r]).getAttribute("data-href"))===c||n===t)return e()}var u=document.createElement("link");u.rel="stylesheet",u.type="text/css",u.onload=e,u.onerror=function(e){var c=e&&e.target&&e.target.src||t,f=new Error("Loading CSS chunk "+i+" failed.\n("+c+")");f.request=c,d(f)},u.href=t,document.getElementsByTagName("head")[0].appendChild(u)}).then(function(){a[i]=0}));var f=b[i];if(0!==f)if(f)e.push(f[2]);else{var c=new Promise(function(e,c){f=b[i]=[e,c]});e.push(f[2]=c);var d,t=document.getElementsByTagName("head")[0],r=document.createElement("script");r.charset="utf-8",r.timeout=120,l.nc&&r.setAttribute("nonce",l.nc),r.src=l.p+"static/js/"+({}[i]||i)+"."+{1:"29d6e463",2:"fe661059",3:"31c51668",4:"1be4fab1",5:"6857ea61",6:"87012689",7:"04183c25",8:"2d43f3e8",9:"df9de5dc",10:"0d5bbe3b",11:"033d7632",12:"fac6388a",13:"40004027",14:"4147d5e2",15:"79bd430f",16:"11236884",17:"2e66e9b2",18:"6bddb31a",19:"370126bb",20:"1cbcee90",21:"d5579174",22:"61a00b81",23:"99bbab3f",24:"ce27f0a0",25:"956de0b5",26:"ec8b6c9a",27:"cbe172fd",28:"299e1f28",29:"7283e1cf",30:"878684eb",31:"1eb52231",32:"b575e6c9",33:"2c55c7f2",34:"a5e3ac8b",35:"e3100637",36:"618471b0",37:"035c25ad",38:"c5533aa0",39:"4db0a4a7",40:"45008cbe",41:"6444b490",42:"d79a4a18",43:"833739a2",44:"9f0cbeea",45:"c2a08fc5",46:"72430e22",47:"0b31bbd8",48:"422d420d",49:"2391739c",50:"0c22dcb1",51:"dd4fb425",52:"f557aeee",53:"642aca24",54:"399b38f9",55:"f78dfb04",56:"ca99fce0",57:"89e47f3b",58:"755b4e42",59:"d02602e8",60:"ca46efec",61:"dfb849dc",62:"3b7532ae",63:"844e7ac2",64:"0dfc70a1",65:"e57efc3b",66:"42c0a7f2",67:"ddf73d3b",68:"cd0be2fd",69:"ead5431d",70:"4c0b3502",71:"fd319e5d",72:"2d956d5e",73:"6030e2ca",74:"d15b7d9f",75:"e535c3ff",76:"1f5c9a41",77:"e1259f37",78:"ef94a54a",79:"bea66722",80:"d1c06ca4",81:"6573a10e",82:"0fdf25f1",83:"63be4924",84:"122bbadd",86:"e0306163"}[i]+".chunk.js",d=function(e){r.onerror=r.onload=null,clearTimeout(n);var c=b[i];if(0!==c){if(c){var f=e&&("load"===e.type?"missing":e.type),d=e&&e.target&&e.target.src,t=new Error("Loading chunk "+i+" failed.\n("+f+": "+d+")");t.type=f,t.request=d,c[1](t)}b[i]=void 0}};var n=setTimeout(function(){d({type:"timeout",target:r})},12e4);r.onerror=r.onload=d,t.appendChild(r)}return Promise.all(e)},l.m=o,l.c=f,l.d=function(e,c,f){l.o(e,c)||Object.defineProperty(e,c,{enumerable:!0,get:f})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(c,e){if(1&e&&(c=l(c)),8&e)return c;if(4&e&&"object"==typeof c&&c&&c.__esModule)return c;var f=Object.create(null);if(l.r(f),Object.defineProperty(f,"default",{enumerable:!0,value:c}),2&e&&"string"!=typeof c)for(var d in c)l.d(f,d,function(e){return c[e]}.bind(null,d));return f},l.n=function(e){var c=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(c,"a",c),c},l.o=function(e,c){return Object.prototype.hasOwnProperty.call(e,c)},l.p="/",l.oe=function(e){throw console.error(e),e};var c=window.webpackJsonp=window.webpackJsonp||[],d=c.push.bind(c);c.push=e,c=c.slice();for(var t=0;t<c.length;t++)e(c[t]);var s=d;u()}([])</script><script src="/static/js/85.12fe7991.chunk.js"></script><script src="/static/js/main.d5263401.chunk.js"></script></body></html>
